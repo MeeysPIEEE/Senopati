@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-serif: var(--font-instrument), Georgia, "Times New Roman", serif;
+
+  /* Corporate navy */
+  --color-navy-50: #eef3fa;
+  --color-navy-100: #d9e4f2;
+  --color-navy-200: #b3c9e2;
+  --color-navy-300: #84a6cc;
+  --color-navy-400: #527fb0;
+  --color-navy-500: #336494;
+  --color-navy-600: #224e7c;
+  --color-navy-700: #183c61;
+  --color-navy-800: #102a46;
+  --color-navy-900: #0a1d33;
+  --color-navy-950: #05101f;
+
+  /* Gold accent */
+  --color-gold-50: #fbf5e9;
+  --color-gold-100: #f5e7c8;
+  --color-gold-200: #ecd09a;
+  --color-gold-300: #e0b669;
+  --color-gold-400: #d5a041;
+  --color-gold-500: #c4882b;
+  --color-gold-600: #a96f20;
+  --color-gold-700: #875619;
+
+  /* Steel greys */
+  --color-steel-50: #f4f6f8;
+  --color-steel-100: #e6eaef;
+  --color-steel-200: #c7d0da;
+  --color-steel-300: #a3b0bf;
+  --color-steel-400: #7b8a9c;
+  --color-steel-500: #5c6b7d;
+  --color-steel-600: #475462;
+  --color-steel-700: #36404c;
+
+  --color-paper: #f5f3ee;
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-pulse-ring: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(1.9);
+      opacity: 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c4882b;
+  color: #05101f;
+}
+
+@layer utilities {
+  /* Cinematic film-grain overlay for dark sections */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  }
+
+  /* Outlined display type */
+  .text-outline-light {
+    -webkit-text-stroke: 1px rgba(245, 243, 238, 0.22);
+    color: transparent;
+  }
+
+  .text-outline-navy {
+    -webkit-text-stroke: 1px rgba(10, 29, 51, 0.16);
+    color: transparent;
+  }
+
+  /* Fine gold hairline */
+  .gold-hairline {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(213, 160, 65, 0.65),
+      transparent
+    );
+  }
+
+  /* Subtle blueprint grid for dark bands */
+  .bg-blueprint {
+    background-image: linear-gradient(
+        rgba(132, 166, 204, 0.07) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(132, 166, 204, 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
