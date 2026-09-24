@@ -6,7 +6,7 @@ export const SITE = {
   description:
     "PT Senopati Mega Nusantara adalah holding company serbaguna di Kendal, Jawa Tengah — perdagangan suku cadang mobil, produk logam & skrap, pemulihan material, pengolahan kopi, dan aktivitas keuangan.",
   address:
-    "Jalur Lambat, Jl. Soekarno Hatta No. 377, Desa/Kelurahan Langenharjo, Kec. Kendal, Kab. Kendal, Jawa Tengah 51314",
+    "Jl. Soekarno Hatta No. 377, Desa/Kelurahan Langenharjo, Kec. Kendal, Kab. Kendal, Jawa Tengah 51314",
   addressShort: "Jl. Soekarno Hatta No. 377, Kendal, Jawa Tengah 51314",
   phoneDisplay: "0813-3299-3706",
   phoneIntl: "+6281332993706",
